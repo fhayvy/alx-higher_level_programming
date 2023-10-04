@@ -5,6 +5,7 @@ str_number = str(number)
 last_index = str_number[-1]
 last_digit = int(last_index)
 message = f"Last digit of {number} is {last_digit}"
+
 if last_digit > 5:
     print(f"{message} and is greater than 5")
 elif last_digit == 0:
