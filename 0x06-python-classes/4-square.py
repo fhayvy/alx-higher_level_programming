@@ -1,17 +1,32 @@
 #!/usr/bin/python3
+"""Defines a class"""
+
+
 class Square:
+    """Blueprint for creating a square"""
 
-    def __init__(self,size=0):
+    def __init__(self, size=0):
+        """Initializes the square object
+        Args:
+            size: The size of the square
+        """
         self.__size = size
-
 
     @property
     def size(self):
+        """A getter to retrieve size"""
         return self.__size
-
 
     @size.setter
     def size(self, value):
+        """Sets the value of size
+        Args:
+            value: The size of the square
+        Returns:
+            ValueError: If size is less than 0
+            TypeError: If size is not an integer
+        """
+
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("size must be >= 0")
@@ -20,6 +35,6 @@ class Square:
 
         self.__size = value
 
-
     def area(self):
-        return self.__size ** 2
+        """Returns the Area of the square"""
+        return (self.__size ** 2)
