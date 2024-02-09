@@ -5,9 +5,9 @@
 class Square:
     """The blueprint to create a sqaure"""
 
-    def __init__(self,size=0):
+    def __init__(self, size=0):
         """Initializes the square
-        Args: 
+        Args:
             size - Represnts the size of the square defined
         Raises:
             ValueError: If size is less than 0
