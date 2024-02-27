@@ -92,7 +92,7 @@ class Rectangle(Base):
             for column in range(self.__width):
                 print("#", end="")
             print()
-            
+
     def __str__(self):
         """Overrides the __str__ method"""
 
