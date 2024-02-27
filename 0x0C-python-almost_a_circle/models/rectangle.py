@@ -88,10 +88,12 @@ class Rectangle(Base):
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
 
-        for i in range(width):
-            pass
-        pass
-
+        for row in range(self.__height):
+            print("")
+            for column in range(self.__width):
+                print("#", end="")
+        print("")
+            
     def __str__(self):
         """Overrides the __str__ method"""
 
