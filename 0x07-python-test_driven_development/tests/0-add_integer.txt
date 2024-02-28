@@ -5,6 +5,7 @@ This module tests the add_integer function in the 0-add_integer.py file.
 
 """
 
+
 First, we import the add_integer function from the 0-add_integer.py file
 
 	>>> add_integer = __import__('0-add_integer').add_integer
@@ -29,12 +30,6 @@ Test for two floats (a = 3.14, b = 7.4)
 	>>> add_integer(3.14, 7.4)
 	10
 
-Passing no argument to the function
-	>>> add_integer()
-	Traceback (most recent call last):
-		...
-	TypeError: add_integer() missing 1 required positional argument: 'a'
-
 Passing an integer and a string into the function
 	>>> add_integer(3, 'c')
 	Traceback (most recent call last):
@@ -53,3 +48,18 @@ Passing one string into the function
 		...
 	TypeError: a must be an integer
 
+Passing only one integer to the function
+	>>> add_integer(3)
+	101
+
+Passing two strings into the function
+	>>> add_integer('a', 'b')
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Passing no argument to the function
+        >>> add_integer()
+        Traceback (most recent call last):
+                ...
+        TypeError: add_integer() missing 1 required positional argument: 'a'
