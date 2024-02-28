@@ -1,3 +1,55 @@
-Test cases for 0-add_integer module
+"""
+This is the 0-add_integer.txt module.
 
+This module tests the add_integer function in the 0-add_integer.py file.
+
+"""
+
+First, we import the add_integer function from the 0-add_integer.py file
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test for two positive integers (a = 7, b = 11):
+	>>> add_integer(7, 11)
+	18
+
+Test for one negative integer and one positive integer (a = -8, b = 9):
+	>>> add_integer(-8, 9)
+	1
+
+Test for two negative integers (a = -17, b = -23)
+	>>> add_integer(-17, -23)
+	-40
+
+Test for exact integers
+	>>> add_integer(30.0, 7.0)
+	37
+
+Test for two floats (a = 3.14, b = 7.4)
+	>>> add_integer(3.14, 7.4)
+	10
+
+Passing no argument to the function
+	>>> add_integer()
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Passing an integer and a string into the function
+	>>> add_integer(3, 'c')
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+Passing a string and an integer into the function
+	>>> add_integer('h', 10)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Passing one string into the function
+	>>> add_integer('favour')
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
 
