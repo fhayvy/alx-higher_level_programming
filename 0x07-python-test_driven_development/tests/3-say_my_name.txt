@@ -1,0 +1,46 @@
+"""
+This is the 3-say_my_name.txt module.
+
+This module tests the say_my_name function in 3-say_my_name.py
+
+"""
+
+First, we import the say_my_name function from 3-say_my_name.py
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing the function with two string values
+
+	>>> first_name = "Favour"
+	>>> last_name = "Eze"
+	>>> say_my_name(first_name, last_name)
+	My name is Favour Eze
+
+
+	>>> first_name = ""
+        >>> last_name = ""
+        >>> say_my_name(first_name, last_name)
+	My name is  
+
+
+	>>> first_name = "Favour"
+        >>> last_name = 12
+        >>> say_my_name(first_name, last_name)
+        Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+
+	>>> first_name = 12
+        >>> last_name = "Eze"
+        >>> say_my_name(first_name, last_name)
+        Traceback (most recent call last):
+                ...
+        TypeError: first_name must be a string
+
+
+	>>> first_name = None
+        >>> last_name = None
+        >>> say_my_name(first_name, last_name)
+        Traceback (most recent call last):
+                ...
+        TypeError: first_name must be a string
