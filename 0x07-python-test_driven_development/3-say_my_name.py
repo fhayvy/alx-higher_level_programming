@@ -3,8 +3,6 @@
 first name and last name of a person
 """
 
-import sys
-
 
 def say_my_name(first_name, last_name=""):
     """Prints out the first and last name of

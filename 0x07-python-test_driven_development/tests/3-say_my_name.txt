@@ -44,3 +44,24 @@ Testing the function with two string values
         Traceback (most recent call last):
                 ...
         TypeError: first_name must be a string
+
+
+	>>> first_name = "Favour"
+        >>> last_name = "Eze"
+        >>> say_my_name()
+        Traceback (most recent call last):
+                ...
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+	>>> first_name = "Favour"
+        >>> last_name = "Eze"
+        >>> say_my_name(first_name)
+	My name is Favour 
+
+
+	>>> first_name = "Favour"
+        >>> last_name = "Eze"
+        >>> say_my_name(last_name)
+        My name is Eze 
+
