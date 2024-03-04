@@ -4,8 +4,14 @@ This is the 2-matrix_divided.txt module.
 This module tests the matrix_divided(matrix, div) function in 2-matrix_divided.py
 """
 
-First, we import the function from 2-matrix_divided.py
+
+
+-> First, we import the function from 2-matrix_divided.py
 	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	
+
+-> This function takes a list of lists of integers and returns a new matrix that is a
+copy of the argument "matrix" divided by the argument "div"
 
         >>> matrix = [
         ...     [2, 4, 6, 8],
@@ -16,6 +22,9 @@ First, we import the function from 2-matrix_divided.py
         >>> matrix_divided(matrix, 2)
         [[1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], [9.0, 10.0, 11.0, 12.0], [13.0, 14.0, 15.0, 16.0]]
 
+
+-> The new matrix are rounded up to a maxium of two decimal places.
+
 	>>> matrix = [
         ...     [1, 2, 3],
         ...     [4, 5, 6]
@@ -23,7 +32,17 @@ First, we import the function from 2-matrix_divided.py
         >>> matrix_divided(matrix, 3)
         [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-	>>> matrix = [
+
+-> However, the orignal matrix is left unchanged, the function makes a copy of that original matrix
+and modifies the copy.
+	
+	>>> print(matrix)
+	[[1, 2, 3], [4, 5, 6]]
+
+
+-> This function also works for list of lists which are composed of both integers and floats.
+
+        >>> matrix = [
         ...     [1, 2, 3.12],
         ...     [4, 5.9, 6]
         ... ]
@@ -31,12 +50,30 @@ First, we import the function from 2-matrix_divided.py
         [[0.33, 0.67, 1.04], [1.33, 1.97, 2.0]]
 
 
+-> This function also works for list of lists which are composed of floats.
+
+	>>> matrix = [
+        ...     [1.5, 2.45, 3.12],
+        ...     [4.2, 5.9, 6.9]
+        ... ]
+        >>> matrix_divided(matrix, 3)
+        [[0.5, 0.82, 1.04], [1.4, 1.97, 2.3]]
+
+
+	>>> matrix = [
+	...     [1.5, 2.45, 3.12],
+        ...     [4.2, 5.9, 6.9]
+        ... ]
+        >>> matrix_divided(matrix, 3.47)
+        [[0.43, 0.71, 0.9], [1.21, 1.7, 1.99]]
+
 
 Test for when matrix = []
 	>>> matrix_divided([], 4)
 	Traceback (most recent call last):
 		...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 
 Test for when matrix is not a list of lists
 	
