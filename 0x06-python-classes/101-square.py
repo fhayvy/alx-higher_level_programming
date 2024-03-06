@@ -5,6 +5,23 @@
 class Square:
     """Blueprint to create a square"""
 
+    def __str__(self):
+        if self.size == 0:
+            return '\n'
+
+        square_str = ""
+        for i in range(self.position[1]):
+            square_str += '\n'
+
+        for i in range(self.size):
+            for j in range(self.position[0]):
+                square_str += " "
+            for k in range(self.size):
+                square_str += "#"
+            if i is not (self.size - 1):
+                square_str += '\n'
+        return square_str
+
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the square object
         Args:
@@ -86,20 +103,3 @@ class Square:
             for i in range(self.size):
                 print("#", end='')
             print()
-
-    def __str__(self):
-        if self.size == 0:
-            return '\n'
-
-        square_str = ""
-        for i in range(self.position[1]):
-            square_str += '\n'
-
-        for i in range(self.size):
-            for j in range(self.position[0]):
-                square_str += " "
-            for k in range(self.size):
-                square_str += "#"
-            if i is not (self.size - 1):
-                square_str += '\n'
-        return square_str
