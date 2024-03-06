@@ -31,7 +31,7 @@ class Rectangle:
             TypeError: if value is not an int
         """
 
-        if isinstance(value, int):
+        if type(value) == int:
             if value < 0:
                 raise ValueError("width must be >= 0")
         else:
