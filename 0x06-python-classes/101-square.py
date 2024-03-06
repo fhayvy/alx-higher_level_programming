@@ -6,10 +6,11 @@ class Square:
     """Blueprint to create a square"""
 
     def __str__(self):
-        if self.size == 0:
-            return '\n'
-
         square_str = ""
+
+        if self.size == 0:
+            return square_str
+
         for i in range(self.position[1]):
             square_str += '\n'
 
