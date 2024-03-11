@@ -12,8 +12,8 @@ class Rectangle:
             height: The height of the rectangle
         """
 
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -53,6 +53,7 @@ class Rectangle:
         Returns:
             ValueError: If value is less than 0
             TypeError: If value is not an int
+        """
 
         if isinstance(value, int):
             if value < 0:
@@ -77,5 +78,17 @@ class Rectangle:
 
         return (perimeter)
 
-    def print():
+    def __str__(self):
         """Prints the rectangle with the character #"""
+
+        rec_string = ""
+
+        if self.width == 0 or self.height == 0:
+            return rec_string
+
+        for i in range(self.height):
+            for j in range(self.width):
+                rec_string += '#'
+            if i is not (self.height - 1):
+                rec_string += '\n'
+        return rec_string
