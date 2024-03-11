@@ -96,7 +96,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
 
         if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle"
+            raise TypeError("rect_2 must be an instance of Rectangle")
 
         if rect_1.area() >= rect_2.area():
             return rect_1
@@ -106,7 +106,7 @@ class Rectangle:
     def __str__(self):
         """Prints the rectangle with the character #"""
 
-        rec_string=""
+        rec_string = ""
 
         if self.width == 0 or self.height == 0:
             return rec_string
